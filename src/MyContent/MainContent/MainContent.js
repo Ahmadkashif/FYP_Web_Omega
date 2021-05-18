@@ -25,7 +25,6 @@ class MainContent extends Component{
         return this.state.userCollection.map( player =>
             <PlayerCollectionCard fname = {player.fName} lname = {player.lName} email = {player.email} id_cust = {player._id}/>
         )
-
         else
         return (<div></div>)
     }

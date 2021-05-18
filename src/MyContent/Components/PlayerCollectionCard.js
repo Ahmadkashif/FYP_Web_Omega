@@ -11,7 +11,6 @@ class PlayerCollectionCard extends Component{
                         <h5 className="card-title d-flex mt-2">NAME:  {this.props.fname}{this.props.lname} </h5>
                             <p className="card-text CardTextCust d-flex justify-content-center">id: {this.props.id_cust}   EMAIL:{this.props.email}</p>
                         <div className = "d-flex justify-content-center">
-                        
                         </div>
                     </div>
                 </div>

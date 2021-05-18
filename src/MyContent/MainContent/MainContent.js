@@ -7,6 +7,7 @@ class MainContent extends Component{
     state = {
         userCollection: []
     }
+    
      getUsers = async ()=>{
 
         await axios.get('http://localhost:4050/mongodb/dbGET/127.0.0.1/27017/poolSize=20&w=majority/test/playersCollectionAppLevel/document/'+JSON.stringify({}))

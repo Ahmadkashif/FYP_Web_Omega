@@ -8,7 +8,8 @@ class MainContent extends Component{
         userCollection: []
     }
     
-     getUsers = async ()=>{
+
+    getUsers = async ()=>{
 
         await axios.get('http://localhost:4050/mongodb/dbGET/127.0.0.1/27017/poolSize=20&w=majority/test/playersCollectionAppLevel/document/'+JSON.stringify({}))
         .then(res => {
@@ -20,7 +21,10 @@ class MainContent extends Component{
             console.log(error);
         })
     }
+
+
     renderPlayers(){
+        
         console.log("called")
         if(this.state.userCollection.length)
         return this.state.userCollection.map( player =>
@@ -29,9 +33,12 @@ class MainContent extends Component{
         else
         return (<div></div>)
     }
+
     rendernothing(){
 
     }
+
+
     render(){
         const collection = this.state.userCollection;
         return (
@@ -45,6 +52,8 @@ class MainContent extends Component{
             </div>
         )
     }
+
+    
 }
 export default MainContent
 //mongodb/dbGET/127.0.0.1/27017/poolSize=20&w=majority/test/playersCollectionAppLevel/document
